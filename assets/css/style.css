@@ -4,6 +4,7 @@
 
 :root {
     --font-title: "Sen", sans-serif;
+    --color-primary: #ffb900;
 }
 
 html {
@@ -31,7 +32,7 @@ a {
     padding: 0 16px;
     line-height: 50px;
     display: inline-block;
-    border-radius: 25px;
+    border-radius: 999px;
     background: #171100;
     color: #fff;
     font-size: 1.4rem;
@@ -101,12 +102,12 @@ a {
 }
 .hero .img-block {
     position: relative;
-    /* width: 48%; */
+    width: 48%;
 }
 .hero .body {
     padding-top: 64px;
     margin-left: 230px;
-    width: 40%;
+    width: 52%;
     float: right;
 }
 
@@ -117,6 +118,7 @@ a {
     height: 685px;
     object-fit: cover;
     border-radius: 20px;
+    vertical-align: bottom;
 }
 
 .hero .title {
@@ -143,7 +145,7 @@ a {
 
 .hero .btn-courses {
     width: 180px;
-    background: #ffb900;
+    background: var(--color-primary);
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: 0em;
@@ -157,7 +159,7 @@ a {
 
 .hero .fa-solid {
     border-radius: 50%;
-    color: #ffb900;
+    color: var(--color-primary);
 }
 
 .hero .watch i {
@@ -208,10 +210,12 @@ a {
     padding: 24px;
     background: #fff;
     border-radius: 12px;
+    box-shadow: 0px 16px 32px 0px #0000000d;
 }
 .hero-summary .item {
     display: flex;
     margin-top: 18px;
+    align-items: center;
 }
 .hero-summary .item:first-child {
     margin-top: 0;
@@ -243,4 +247,154 @@ a {
 
 .hero-summary .label {
     white-space: nowrap;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0em;
+}
+
+/* ==================================== Popular ======================================*/
+.popular {
+    margin-top: 200px;
+}
+
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-top .title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 1.26;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.popular-top .info {
+    width: 458px;
+}
+
+.popular-top .cta-arrow {
+    display: flex;
+}
+
+.popular-top .cta-arrow .fa-solid + .fa-solid {
+    margin-left: 18px;
+}
+.popular-top .fa-solid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    border: 1px solid #ffb900;
+    border-radius: 50%;
+    color: var(--color-primary);
+    width: 6px;
+    height: 12px;
+}
+
+.popular-top .fa-solid:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.popular .course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .course-item {
+    flex: 1;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+}
+
+.popular .course-item:hover {
+    border: none;
+    box-shadow: 0px 18px 36px 0px #0000000d;
+}
+
+.popular .course-item .image {
+    width: calc(100% + 2px);
+    margin: -1px;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.popular .course-item .info {
+    padding: 16px 22px 22px 22px;
+}
+
+.popular .course-item .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular .course-item .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .rating {
+    display: flex;
+    align-items: center;
+}
+.popular .rating .star {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+.popular .rating .value {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #fea31b;
+}
+
+.course-item .info .desc {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+.course-item .info .foot {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-item .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.course-item .foot .book-btn {
+    width: 118px;
+    border: none;
+}
+
+.course-item .foot .book-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
 }
